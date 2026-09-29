@@ -1,0 +1,7 @@
+# El paquete esta anclado por SHA-256 en MANIFEST.sha256 y en las actas del
+# programa. Git no debe alterar ningun byte: convertir finales de linea LF a
+# CRLF al clonar cambiaria el hash de cada archivo de texto y verify.py
+# fallaria para cualquiera que clone en Windows.
+#
+# -text desactiva toda conversion de finales de linea, para todos los archivos.
+* -text

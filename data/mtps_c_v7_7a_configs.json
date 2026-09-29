@@ -1,0 +1,379 @@
+{
+  "n_ensemble_values": [
+    50,
+    100,
+    200
+  ],
+  "subsets": [
+    "in_distribution",
+    "ood_near",
+    "ood_far"
+  ],
+  "seeds": {
+    "in_distribution": 42,
+    "ood_near": 4242,
+    "ood_far": 7878
+  },
+  "configs": [
+    {
+      "config_id": "ID_figura_ocho_00",
+      "subset": "in_distribution",
+      "regime_or_subtype": "figura_ocho",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_figura_ocho_01",
+      "subset": "in_distribution",
+      "regime_or_subtype": "figura_ocho",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_figura_ocho_02",
+      "subset": "in_distribution",
+      "regime_or_subtype": "figura_ocho",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_figura_ocho_03",
+      "subset": "in_distribution",
+      "regime_or_subtype": "figura_ocho",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_jerarquico_00",
+      "subset": "in_distribution",
+      "regime_or_subtype": "jerarquico",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_jerarquico_01",
+      "subset": "in_distribution",
+      "regime_or_subtype": "jerarquico",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_jerarquico_02",
+      "subset": "in_distribution",
+      "regime_or_subtype": "jerarquico",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_jerarquico_03",
+      "subset": "in_distribution",
+      "regime_or_subtype": "jerarquico",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_resonancia_00",
+      "subset": "in_distribution",
+      "regime_or_subtype": "resonancia",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_resonancia_01",
+      "subset": "in_distribution",
+      "regime_or_subtype": "resonancia",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_resonancia_02",
+      "subset": "in_distribution",
+      "regime_or_subtype": "resonancia",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_resonancia_03",
+      "subset": "in_distribution",
+      "regime_or_subtype": "resonancia",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_euler_colineal_00",
+      "subset": "in_distribution",
+      "regime_or_subtype": "euler_colineal",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_euler_colineal_01",
+      "subset": "in_distribution",
+      "regime_or_subtype": "euler_colineal",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_euler_colineal_02",
+      "subset": "in_distribution",
+      "regime_or_subtype": "euler_colineal",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_euler_colineal_03",
+      "subset": "in_distribution",
+      "regime_or_subtype": "euler_colineal",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_masas_asimetricas_00",
+      "subset": "in_distribution",
+      "regime_or_subtype": "masas_asimetricas",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_masas_asimetricas_01",
+      "subset": "in_distribution",
+      "regime_or_subtype": "masas_asimetricas",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_masas_asimetricas_02",
+      "subset": "in_distribution",
+      "regime_or_subtype": "masas_asimetricas",
+      "source_seed": 42
+    },
+    {
+      "config_id": "ID_masas_asimetricas_03",
+      "subset": "in_distribution",
+      "regime_or_subtype": "masas_asimetricas",
+      "source_seed": 42
+    },
+    {
+      "config_id": "OOD_NEAR_figura_ocho_00",
+      "subset": "ood_near",
+      "regime_or_subtype": "figura_ocho",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_figura_ocho_01",
+      "subset": "ood_near",
+      "regime_or_subtype": "figura_ocho",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_figura_ocho_02",
+      "subset": "ood_near",
+      "regime_or_subtype": "figura_ocho",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_figura_ocho_03",
+      "subset": "ood_near",
+      "regime_or_subtype": "figura_ocho",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_jerarquico_00",
+      "subset": "ood_near",
+      "regime_or_subtype": "jerarquico",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_jerarquico_01",
+      "subset": "ood_near",
+      "regime_or_subtype": "jerarquico",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_jerarquico_02",
+      "subset": "ood_near",
+      "regime_or_subtype": "jerarquico",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_jerarquico_03",
+      "subset": "ood_near",
+      "regime_or_subtype": "jerarquico",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_resonancia_00",
+      "subset": "ood_near",
+      "regime_or_subtype": "resonancia",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_resonancia_01",
+      "subset": "ood_near",
+      "regime_or_subtype": "resonancia",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_resonancia_02",
+      "subset": "ood_near",
+      "regime_or_subtype": "resonancia",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_resonancia_03",
+      "subset": "ood_near",
+      "regime_or_subtype": "resonancia",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_euler_colineal_00",
+      "subset": "ood_near",
+      "regime_or_subtype": "euler_colineal",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_euler_colineal_01",
+      "subset": "ood_near",
+      "regime_or_subtype": "euler_colineal",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_euler_colineal_02",
+      "subset": "ood_near",
+      "regime_or_subtype": "euler_colineal",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_euler_colineal_03",
+      "subset": "ood_near",
+      "regime_or_subtype": "euler_colineal",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_masas_asimetricas_00",
+      "subset": "ood_near",
+      "regime_or_subtype": "masas_asimetricas",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_masas_asimetricas_01",
+      "subset": "ood_near",
+      "regime_or_subtype": "masas_asimetricas",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_masas_asimetricas_02",
+      "subset": "ood_near",
+      "regime_or_subtype": "masas_asimetricas",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_NEAR_masas_asimetricas_03",
+      "subset": "ood_near",
+      "regime_or_subtype": "masas_asimetricas",
+      "source_seed": 4242
+    },
+    {
+      "config_id": "OOD_FAR_separatriz_00",
+      "subset": "ood_far",
+      "regime_or_subtype": "separatriz",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_separatriz_01",
+      "subset": "ood_far",
+      "regime_or_subtype": "separatriz",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_separatriz_02",
+      "subset": "ood_far",
+      "regime_or_subtype": "separatriz",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_separatriz_03",
+      "subset": "ood_far",
+      "regime_or_subtype": "separatriz",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_encuentro_violento_00",
+      "subset": "ood_far",
+      "regime_or_subtype": "encuentro_violento",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_encuentro_violento_01",
+      "subset": "ood_far",
+      "regime_or_subtype": "encuentro_violento",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_encuentro_violento_02",
+      "subset": "ood_far",
+      "regime_or_subtype": "encuentro_violento",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_encuentro_violento_03",
+      "subset": "ood_far",
+      "regime_or_subtype": "encuentro_violento",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_escape_temprano_00",
+      "subset": "ood_far",
+      "regime_or_subtype": "escape_temprano",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_escape_temprano_01",
+      "subset": "ood_far",
+      "regime_or_subtype": "escape_temprano",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_escape_temprano_02",
+      "subset": "ood_far",
+      "regime_or_subtype": "escape_temprano",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_escape_temprano_03",
+      "subset": "ood_far",
+      "regime_or_subtype": "escape_temprano",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_masas_extremas_00",
+      "subset": "ood_far",
+      "regime_or_subtype": "masas_extremas",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_masas_extremas_01",
+      "subset": "ood_far",
+      "regime_or_subtype": "masas_extremas",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_masas_extremas_02",
+      "subset": "ood_far",
+      "regime_or_subtype": "masas_extremas",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_masas_extremas_03",
+      "subset": "ood_far",
+      "regime_or_subtype": "masas_extremas",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_no_virializado_00",
+      "subset": "ood_far",
+      "regime_or_subtype": "no_virializado",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_no_virializado_01",
+      "subset": "ood_far",
+      "regime_or_subtype": "no_virializado",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_no_virializado_02",
+      "subset": "ood_far",
+      "regime_or_subtype": "no_virializado",
+      "source_seed": 7878
+    },
+    {
+      "config_id": "OOD_FAR_no_virializado_03",
+      "subset": "ood_far",
+      "regime_or_subtype": "no_virializado",
+      "source_seed": 7878
+    }
+  ]
+}

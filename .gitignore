@@ -1,0 +1,22 @@
+# Salidas grandes: se regeneran corriendo el consolidador de cada etapa.
+# Ver la seccion "Reproducir" del README.
+*table_long.csv
+
+# Checkpoints y resultados intermedios de las corridas
+ckpt_*/
+partial_*.pkl
+*_hash.txt
+ABORTO_*.json
+g14_ok_*.json
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+venv/
+.venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini

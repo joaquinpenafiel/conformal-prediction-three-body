@@ -1,0 +1,29 @@
+Documentacion, datos y resultados
+=================================
+
+Todo el contenido de los directorios docs/, data/ y results/ de este
+repositorio se publica bajo la licencia
+
+    Creative Commons Atribucion 4.0 Internacional (CC BY 4.0)
+    https://creativecommons.org/licenses/by/4.0/deed.es
+
+Esto permite copiar, redistribuir, adaptar y usar el material para
+cualquier finalidad, incluso comercial, con la condicion de dar credito
+adecuado al autor, enlazar a la licencia e indicar si se realizaron
+cambios.
+
+Atribucion sugerida:
+
+    Peñafiel Gonzalez, Joaquin (2026). MTPS-C: prerregistered conformal
+    prediction for chaotic three-body systems.
+    ORCID 0009-0005-2614-9393. CC BY 4.0.
+
+El codigo de los directorios src/, demo/ y el verificador verify.py se
+publican por separado bajo la licencia Apache 2.0; ver el archivo LICENSE.
+
+ADVERTENCIA SOBRE LOS DOCUMENTOS CONGELADOS
+-------------------------------------------
+Los archivos .docx de docs/ estan anclados por SHA-256 en MANIFEST.sha256
+y en las propias actas del programa. Abrirlos con un procesador de textos
+y volver a guardarlos altera su hash aunque el texto no cambie, y rompe la
+verificacion. Para citarlos o reutilizarlos, trabajar sobre copias.

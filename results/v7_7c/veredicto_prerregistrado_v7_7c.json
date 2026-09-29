@@ -1,0 +1,57 @@
+{
+  "prerregistro": "v7.7-c Borrador 5",
+  "acta": "02 + Anexo C7-c",
+  "puertas": {
+    "G14": "PASADA",
+    "G15": "PASADA",
+    "G16": "PASADA",
+    "G17": "PASADA"
+  },
+  "criterios_vinculantes": {
+    "2": {
+      "c12a": true,
+      "c12c": true,
+      "primer_snapshot_incumple_c12a": null,
+      "primer_bloque_incumple_c12c": null
+    },
+    "4": {
+      "c12a": false,
+      "c12c": true,
+      "primer_snapshot_incumple_c12a": 26,
+      "primer_bloque_incumple_c12c": null
+    }
+  },
+  "escenario": "S12.1",
+  "veredicto": "FRONTERA CARACTERIZADA",
+  "consecuencia": "El horizonte útil queda acotado empíricamente. Primero se degrada: C12.a estructural desde el snapshot 26. El dominio operativo del instrumento queda caracterizado en su eje temporal y la etapa aplicada hereda ese límite como parámetro de diseño.",
+  "contraste_prediccion": {
+    "condicion_declarada": "supone tasa de crecimiento constante; nada garantiza que se mantenga",
+    "puntos": {
+      "10": {
+        "d_eff_raw_predicho": 2.38,
+        "d_eff_raw_observado": 2.3833333333333333,
+        "tau_radio_predicho": 0.0857,
+        "tau_radio_observado": 0.09403219763322154
+      },
+      "20": {
+        "d_eff_raw_predicho": 3.47,
+        "d_eff_raw_observado": 2.816666666666667,
+        "tau_radio_predicho": 0.107,
+        "tau_radio_observado": 0.10449261324305967
+      },
+      "40": {
+        "d_eff_raw_predicho": 7.35,
+        "d_eff_raw_observado": 3.2,
+        "tau_radio_predicho": 0.165,
+        "tau_radio_observado": 0.1437212360999483
+      }
+    }
+  },
+  "procedencia_de_modulos": {
+    "H2": "5539e083796e26e2254c4bea50cc4a0b45f9c6b0dc7d6b66c8f47da0c657885e",
+    "H4": "a6c37a3b8931e87223d25103965ea8392adb61b14831cb1f95b4c00844f038d6",
+    "nota": "Si los stages traen módulos distintos, la combinación está autorizada por la Enmienda 02 al Acta 02: el partial de H = 2 se generó antes de la enmienda, que modifica la función de comparación de las puertas y no el cómputo."
+  },
+  "limite_de_atribucion": "Mismo dataset y mismas seeds que v7.7-a y v7.7-b; es un experimento de horizonte prerregistrado, no una validación independiente. La etapa se corrió sin brazo de control, de modo que no puede descartarse que una frontera de cobertura fuera artefacto del brazo principal; el criterio primario, en cambio, no es de cobertura.",
+  "alcance_de_c12a": "El incumplimiento de C12.a acota el régimen de compresibilidad bidimensional del ensemble. No declara la invalidez del método, que puede seguir operando con más componentes."
+}

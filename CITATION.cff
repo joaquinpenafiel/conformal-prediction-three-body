@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+title: >-
+  MTPS-C: prerregistered conformal prediction for chaotic
+  three-body systems
+message: >-
+  If you use this work, please cite it using the metadata
+  below.
+type: software
+authors:
+  - family-names: Peñafiel González
+    given-names: Joaquín
+    orcid: https://orcid.org/0009-0005-2614-9393
+    country: CL
+repository-code: >-
+  https://github.com/joaquinpenafiel/conformal-prediction-three-body
+abstract: >-
+  A prerregistered experimental program that characterises the
+  operating domain of a conformal prediction instrument for
+  chaotic three-body systems. Coverage is calibrated per
+  physical configuration using simulated replicas as a local
+  calibration set. Three closed stages measure robustness to
+  ensemble size, to calibration-set size, and to temporal
+  horizon. Every stage was frozen before execution, verified
+  by abort gates, and closed by a mechanical verdict over
+  criteria fixed in advance. The full audit chain — preregistrations,
+  freezing minutes, amendments, code and outputs — is anchored by
+  SHA-256 and verifiable with the included verifier.
+keywords:
+  - conformal prediction
+  - uncertainty quantification
+  - chaotic systems
+  - three-body problem
+  - preregistration
+  - reproducibility
+license: Apache-2.0
+license-url: >-
+  https://github.com/joaquinpenafiel/conformal-prediction-three-body/blob/main/LICENSE
+version: 7.7-c
+date-released: '2026-09-22'

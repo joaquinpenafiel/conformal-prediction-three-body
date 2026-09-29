@@ -1,0 +1,39 @@
+{
+  "prerregistro": "v7.7-b Borrador 8",
+  "acta": "01 + Enmienda 01",
+  "puertas": {
+    "G13": "PASADA",
+    "G12": "PASADA",
+    "G11": "PASADA"
+  },
+  "criterios_por_M": {
+    "25": {
+      "c11a": false,
+      "c11b": true,
+      "c11c": true,
+      "c11f_i": true,
+      "c11f_ii": true,
+      "c11d": true
+    },
+    "40": {
+      "c11a": true,
+      "c11b": true,
+      "c11c": true,
+      "c11f_i": true,
+      "c11f_ii": true,
+      "c11d": true
+    },
+    "50": {
+      "c11a": true,
+      "c11b": true,
+      "c11c": true,
+      "c11f_i": true,
+      "c11f_ii": true,
+      "c11d": true
+    }
+  },
+  "escenario": "S11.1",
+  "veredicto": "GRILLA HABILITADA",
+  "consecuencia": "v7.7-c hereda M = 40, conforme a la regla de consecuencia prerregistrada en la § 4.",
+  "limite_de_atribucion": "Mismo dataset y mismas seeds que v7.7-a; es un experimento de sensibilidad prerregistrado, no una validación independiente."
+}

@@ -1,0 +1,57 @@
+MTPS-C v7.7-b — Sensibilidad del conjunto de calibración (barrido de M)
+==============================================================================
+Prerregistro: Hoja de Ruta v7.7-b, Borrador 8
+Acta de Congelamiento 01 + Enmienda 01
+N = 50 fijo; método aux2b congelado; única variable: M
+Puertas: G13 (dataset), G12 (índices), G11 (regresión M=25) — PASADAS
+
+=== BRAZO PRINCIPAL ===
+
+  M=25  n_calib=12  (PRINCIPAL M=25):
+    p=0.3   Cov= 30.57%  esperado= 30.77%  desvío= -0.20pp (-0.37σ)  [OK]
+    p=0.5   Cov= 54.25%  esperado= 53.85%  desvío= +0.40pp (+0.76σ)  [OK]
+    p=0.8   Cov= 84.25%  esperado= 84.62%  desvío= -0.37pp (-0.82σ)  [OK]
+    p=0.9   Cov= 92.06%  esperado= 92.31%  desvío= -0.25pp (-0.71σ)  [OK]
+    p=0.95  Cov= 92.06%  esperado= 92.31%  desvío= -0.25pp (-0.71σ)  [OK]
+    C11.a:NO  C11.b:OK  C11.c:OK (5/5)  C11.f(i):OK (frac=1.000)  C11.f(ii):OK (τ0,95/τ0,90=1.0000 ≤ 1.076)  C11.d:OK (std=0.48pp)
+    proxy: mediana=0.0049  Q1=0.0019  Q3=0.0091  max=0.8935  (n=600)
+    escalera τ: 0.3=0.0055  0.5=0.0056  0.8=0.0058  0.9=0.0060  0.95=0.0060
+
+  M=40  n_calib=20  (PRINCIPAL M=40):
+    p=0.3   Cov= 33.51%  esperado= 33.33%  desvío= +0.18pp (+0.34σ)  [OK]
+    p=0.5   Cov= 52.93%  esperado= 52.38%  desvío= +0.55pp (+1.03σ)  [OK]
+    p=0.8   Cov= 80.87%  esperado= 80.95%  desvío= -0.08pp (-0.18σ)  [OK]
+    p=0.9   Cov= 90.13%  esperado= 90.48%  desvío= -0.35pp (-1.01σ)  [OK]
+    p=0.95  Cov= 95.20%  esperado= 95.24%  desvío= -0.04pp (-0.11σ)  [OK]
+    C11.a:OK  C11.b:OK  C11.c:OK (5/5)  C11.f(i):OK (frac=0.998)  C11.f(ii):OK (τ0,95/τ0,90=1.0103 ≤ 1.076)  C11.d:OK (std=0.77pp)
+    proxy: mediana=0.0048  Q1=0.0019  Q3=0.0091  max=1.0795  (n=600)
+    escalera τ: 0.3=0.0055  0.5=0.0056  0.8=0.0058  0.9=0.0059  0.95=0.0060
+
+  M=50  n_calib=25  (PRINCIPAL M=50):
+    p=0.3   Cov= 31.41%  esperado= 30.77%  desvío= +0.64pp (+1.18σ)  [OK]
+    p=0.5   Cov= 50.47%  esperado= 50.00%  desvío= +0.47pp (+0.89σ)  [OK]
+    p=0.8   Cov= 80.92%  esperado= 80.77%  desvío= +0.15pp (+0.34σ)  [OK]
+    p=0.9   Cov= 92.34%  esperado= 92.31%  desvío= +0.03pp (+0.10σ)  [OK]
+    p=0.95  Cov= 96.32%  esperado= 96.15%  desvío= +0.16pp (+0.47σ)  [OK]
+    C11.a:OK  C11.b:OK  C11.c:OK (5/5)  C11.f(i):OK (frac=1.000)  C11.f(ii):OK (τ0,95/τ0,90=1.0111 ≤ 1.076)  C11.d:OK (std=0.78pp)
+    proxy: mediana=0.0047  Q1=0.0019  Q3=0.0091  max=0.9078  (n=600)
+    escalera τ: 0.3=0.0055  0.5=0.0056  0.8=0.0058  0.9=0.0059  0.95=0.0060
+
+=== BRAZO DE CONTROL (invariancia esperada) ===
+
+  M=25: niveles ≤10pp 2/5   Cov(0.3)=62.62%  Cov(0.5)=81.21%  Cov(0.8)=96.70%  Cov(0.9)=98.71%  Cov(0.95)=99.33%
+
+  M=50: niveles ≤10pp 2/5   Cov(0.3)=62.90%  Cov(0.5)=81.66%  Cov(0.8)=96.74%  Cov(0.9)=98.62%  Cov(0.95)=99.35%
+
+=== TENDENCIA POR NIVEL × M (PRINCIPAL) ===
+  Nivel   M=25          M=40          M=50          
+  --------------------------------------------------
+  p=0.30   30.57%       33.51%       31.41%      
+  p=0.50   54.25%       52.93%       50.47%      
+  p=0.80   84.25%       80.87%       80.92%      
+  p=0.90   92.06%       90.13%       92.34%      
+  p=0.95   92.06%       95.20%       96.32%      
+
+=== VEREDICTO MECÁNICO ===
+  ESCENARIO: S11.1 — GRILLA HABILITADA
+  v7.7-c hereda M = 40, conforme a la regla de consecuencia prerregistrada en la § 4.

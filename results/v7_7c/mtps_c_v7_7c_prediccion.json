@@ -1,0 +1,23 @@
+{
+  "condicion_declarada": "supone tasa de crecimiento constante; nada garantiza que se mantenga",
+  "puntos": {
+    "10": {
+      "d_eff_raw_predicho": 2.38,
+      "d_eff_raw_observado": 2.3833333333333333,
+      "tau_radio_predicho": 0.0857,
+      "tau_radio_observado": 0.09403219763322154
+    },
+    "20": {
+      "d_eff_raw_predicho": 3.47,
+      "d_eff_raw_observado": 2.816666666666667,
+      "tau_radio_predicho": 0.107,
+      "tau_radio_observado": 0.10449261324305967
+    },
+    "40": {
+      "d_eff_raw_predicho": 7.35,
+      "d_eff_raw_observado": 3.2,
+      "tau_radio_predicho": 0.165,
+      "tau_radio_observado": 0.1437212360999483
+    }
+  }
+}

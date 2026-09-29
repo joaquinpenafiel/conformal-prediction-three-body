@@ -1,0 +1,88 @@
+MTPS-C v7.7-a - Escalamiento controlado del ensemble
+======================================================================
+
+Dataset mixto: 60 configs (20 ID + 20 OOD cercano + 20 OOD lejano)
+N_ensemble values: [50, 100, 200]
+Metodo aux2b CONGELADO
+Ejecutado en stages: stage1_n50, stage2_n100, stage3_n200, stage4_consolidate
+
+
+=== PRINCIPAL (aux2b) ===
+
+  N=50:
+    p=30.0: Cov=30.6%, ErrCal=0.57pp [OK]
+    p=50.0: Cov=54.2%, ErrCal=4.25pp [OK]
+    p=80.0: Cov=84.2%, ErrCal=4.25pp [OK]
+    p=90.0: Cov=92.1%, ErrCal=2.06pp [OK]
+    p=95.0: Cov=92.1%, ErrCal=2.94pp [OK]
+  Niveles: 5/5
+  C10.a:OK C10.b:OK C10.c:OK C10.d:OK C10.f:OK
+  std alpha=0.50 = 0.48pp
+
+  N=100:
+    p=30.0: Cov=31.1%, ErrCal=1.14pp [OK]
+    p=50.0: Cov=54.1%, ErrCal=4.07pp [OK]
+    p=80.0: Cov=84.8%, ErrCal=4.78pp [OK]
+    p=90.0: Cov=92.6%, ErrCal=2.65pp [OK]
+    p=95.0: Cov=92.6%, ErrCal=2.35pp [OK]
+  Niveles: 5/5
+  C10.a:OK C10.b:OK C10.c:OK C10.d:OK C10.f:OK
+  std alpha=0.50 = 0.75pp
+
+  N=200:
+    p=30.0: Cov=30.8%, ErrCal=0.76pp [OK]
+    p=50.0: Cov=54.0%, ErrCal=4.02pp [OK]
+    p=80.0: Cov=84.6%, ErrCal=4.65pp [OK]
+    p=90.0: Cov=92.8%, ErrCal=2.77pp [OK]
+    p=95.0: Cov=92.8%, ErrCal=2.23pp [OK]
+  Niveles: 5/5
+  C10.a:OK C10.b:OK C10.c:OK C10.d:OK C10.f:OK
+  std alpha=0.50 = 1.03pp
+
+=== CONTROL (v75a) ===
+
+  N=50:
+    p=30.0: Cov=62.6%, ErrCal=32.62pp [NO]
+    p=50.0: Cov=81.2%, ErrCal=31.21pp [NO]
+    p=80.0: Cov=96.7%, ErrCal=16.70pp [NO]
+    p=90.0: Cov=98.7%, ErrCal=8.71pp [OK]
+    p=95.0: Cov=99.3%, ErrCal=4.33pp [OK]
+  Niveles: 2/5
+  C10.a:NO C10.b:NO C10.c:OK C10.d:OK C10.f:OK
+  std alpha=0.50 = 0.00pp
+
+  N=100:
+    p=30.0: Cov=65.9%, ErrCal=35.86pp [NO]
+    p=50.0: Cov=82.9%, ErrCal=32.95pp [NO]
+    p=80.0: Cov=97.2%, ErrCal=17.25pp [NO]
+    p=90.0: Cov=98.5%, ErrCal=8.51pp [OK]
+    p=95.0: Cov=99.2%, ErrCal=4.23pp [OK]
+  Niveles: 2/5
+  C10.a:NO C10.b:NO C10.c:OK C10.d:OK C10.f:OK
+  std alpha=0.50 = 0.00pp
+
+  N=200:
+    p=30.0: Cov=72.9%, ErrCal=42.89pp [NO]
+    p=50.0: Cov=88.2%, ErrCal=38.21pp [NO]
+    p=80.0: Cov=97.2%, ErrCal=17.18pp [NO]
+    p=90.0: Cov=98.5%, ErrCal=8.48pp [OK]
+    p=95.0: Cov=99.3%, ErrCal=4.34pp [OK]
+  Niveles: 2/5
+  C10.a:NO C10.b:NO C10.c:OK C10.d:OK C10.f:OK
+  std alpha=0.50 = 0.00pp
+
+
+ESCENARIO: S10.1 - ROBUSTEZ AL ESCALAMIENTO
+
+El método es robusto al tamaño del ensemble en {50, 100, 200}.
+Próximo paso: v7.7-b sensibilidad a hyperparámetros
+(con N=50 baseline para mayor velocidad).
+
+
+C10.e TENDENCIA (PRINCIPAL):
+Nivel     N=50        N=100       N=200       
+p=0.30    0.57      1.14      0.76      
+p=0.50    4.25      4.07      4.02      
+p=0.80    4.25      4.78      4.65      
+p=0.90    2.06      2.65      2.77      
+p=0.95    2.94      2.35      2.23      

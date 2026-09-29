@@ -1,0 +1,71 @@
+# MTPS-C — manifiesto de integridad del paquete
+#
+# Cada linea: <sha256>  <ruta relativa al repositorio>
+# Verificar con:  python verify.py
+#          o con: sha256sum -c MANIFEST.sha256   (Linux / Git Bash)
+#
+# Los documentos .docx son los archivos congelados del programa. Su hash es la
+# unica prueba de que el contenido es el que las actas declaran: abrirlos y
+# guardarlos los altera aunque el texto no cambie.
+
+# --- Prerregistros congelados ---------------------------------------------
+1fc5fcf84d6553fb1d021890c35cc022e811462ee2783b23f729eea932e009a1  docs/preregistros/Hoja_de_Ruta_MTPS-C_v7_7a_Penafiel.docx
+b25a08a68b7017ba0040f0f96b5d66f790b27db7f2fa6bf84ad9aab2f69cf635  docs/preregistros/Hoja_de_Ruta_MTPS-C_v7_7b_BORRADOR8_Penafiel.docx
+56949b19b1c9572e2cd8a56181b3ac72c909642c6d8feb9dd1b601526735ee66  docs/preregistros/Hoja_de_Ruta_MTPS-C_v7_7c_BORRADOR5_Penafiel.docx
+
+# --- Actas, enmiendas y anexos (versiones vigentes) -----------------------
+6f35a27f20768fcb95e298b6c1e03038c0b1764c44990aa2a0e7836a7f3f2859  docs/actas/ACTA_01_CONGELAMIENTO_MTPS-C_v7_7b.docx
+68c93188209837a7eb12ba5907ecacdcf541fc30037faab638cdbeda9a1ae805  docs/actas/ENMIENDA_01_al_ACTA_01_MTPS-C_v7_7b.docx
+be9ecc9bc688f067b090f120c9bdeff1aace06e28957cf83848eb18a0a8087db  docs/actas/ANEXO_C7_al_ACTA_01_MTPS-C_v7_7b.docx
+89d112134e31b1c921c8f416a5457fe63e10c9fb60ca95a131886dd2b30931fb  docs/actas/ACTA_CIERRE_FORMAL_MTPS-C_v7_7b_v2.docx
+00411e57f7492aa7736dd3b7d40f9bf45eebbeb0089b4e1060a7563fd84bae54  docs/actas/ACTA_02_CONGELAMIENTO_MTPS-C_v7_7c.docx
+cabb62991049e17eba6a97316ff0930d134d13c54f9d5bedf57e85e764df968a  docs/actas/ENMIENDA_02_al_ACTA_02_MTPS-C_v7_7c.docx
+ca32bf54d6069afdb83d49e26a53ddabafdc059d04e0f4f9cbd4b0cec6451b78  docs/actas/ENMIENDA_03_al_ACTA_02_MTPS-C_v7_7c.docx
+9f5e21b275f2239ea8d4a5bbc991c4350d97490bfda6b77f1d78cfc38f75e11f  docs/actas/ANEXO_C7c_REEMISION3_al_ACTA_02_MTPS-C_v7_7c.docx
+2f16b91e34e64634838e0fc52ad902ce875d9e8414421222b02333f9421a952b  docs/actas/ACTA_CIERRE_FORMAL_MTPS-C_v7_7c.docx
+
+# --- Informes de resultados ------------------------------------------------
+9fafe5fa053c4d1b41b1654d289a7b5cde32fa1e3fd2ccf79fa2ff92dbb8a527  docs/informes/Informe_de_Resultados_MTPS-C_v7_7a_Penafiel.docx
+cf0c5f6ffd549a5e07a35a9465fe03f364075c23779e61f37f3f4e72918677e0  docs/informes/Informe_de_Resultados_MTPS-C_v7_7b_Penafiel.docx
+47e4e1bea4e35bc6eddbb91f752190e110a0492dbeddf49ebd5f42ea77186d8b  docs/informes/Informe_de_Resultados_MTPS-C_v7_7c_Penafiel.docx
+
+# --- Notas tecnicas y mapa de literatura -----------------------------------
+24a31b4167ba878b120a8d186f6443b88e60fa3b78afa3de9fbcbb1f04823e4f  docs/notas/Nota_Tecnica_NT01_MTPS-C_Penafiel_rev4.docx
+197d295f096d98a3414f2b17697cbd64d14886512ec3f8b89a00748435aebe66  docs/notas/LIT-00_Mapa_de_Literatura_MTPS-C_v1_0.docx
+eaa7570ab8c6ba8c93fa341f3c4b20d483b453e6ecd02eb4b3aa1ff0887b6991  docs/notas/NA-01_Auditoria_Hoja_de_Ruta_MTPS-C_v7_7b.docx
+
+# --- Codigo ----------------------------------------------------------------
+d0a7b151ff6d456ab2cf51cfbebfddb98b93696d6e676b0c7e8d80930dacf74e  src/v7_7a/mtps_c_v7_7a_common.py
+9485b073ed7281f02f4662c686b62426db4cc60fdd4842b198a671dff610bc30  src/v7_7b/mtps_c_v7_7b_common.py
+4a7f12515db031a448aa115230b3f31c23ab0e5bea2ee9afcfd37e766d2f17a1  src/v7_7b/mtps_c_v7_7b_runner.py
+90b4c33b66c88fe926c4ef01b411c69a3ebaf511a1aca616c8b0532e8d3124ed  src/v7_7b/mtps_c_v7_7b_consolidate.py
+fe5df849c76e05971645726136d7f136f508783ada6c2a92b216966bac1bb027  src/v7_7b/diff_v77a_to_v77b_common.txt
+a6c37a3b8931e87223d25103965ea8392adb61b14831cb1f95b4c00844f038d6  src/v7_7c/mtps_c_v7_7c_common.py
+3f9d345e91d08f19fdf9638e6a3bbb5daa8234a25559e4f6d45a4a51a5b3b2d4  src/v7_7c/mtps_c_v7_7c_runner.py
+2b6bd013c048438713a2a483fc40c63bdebf892bf61ae30d39e02fae60ce0dfd  src/v7_7c/mtps_c_v7_7c_consolidate.py
+2dbbf861cb72c8973da0dcb884982b13fa0f8efdfa52b52d56620a68ba94c251  src/v7_7c/diff_v77b_to_v77c_common.txt
+
+# --- Dataset ---------------------------------------------------------------
+afd73dfbf7ac6b481e054f44e510611d1db327160c1b125d24f29b6597fda8fc  data/mtps_c_v7_7a_configs.json
+
+# --- Resultados v7.7-a -----------------------------------------------------
+a39ca0fe1733a8410c590eac687f80f3ba20700ddd9aad276fc279fc58e33ac1  results/v7_7a/mtps_c_v7_7a_metrics.txt
+463d0855788010c17a28a9ada9e132a144346d95436795b0ad47dfe4de08454d  results/v7_7a/mtps_c_v7_7a_trend.csv
+d0fd6c362e1f44f43f950979f6fd81b0a194767cd716b76e3d64cc396b4915c6  results/v7_7a/mtps_c_v7_7a_table_cells.csv
+b9623ee06ff51e9b73190dc2fb12b6fd0b82170e63062c6aa6e21a833d6f1976  results/v7_7a/tiempos_por_config.csv
+
+# --- Resultados v7.7-b -----------------------------------------------------
+bfe399f813a5a809293c5fb55e163ebb0cb99afd0994d7e5ded475d2ab340168  results/v7_7b/mtps_c_v7_7b_metrics.txt
+0f403d010efa65f0d88b0638a2721b7b6a808c581b66608e7be11a38749c7039  results/v7_7b/mtps_c_v7_7b_trend.csv
+ee72e124483c5095558493444c1a2a2aa2e2cc44a4be8b9c47565249cdc7f5b8  results/v7_7b/mtps_c_v7_7b_proxy_tau.csv
+62a5b7a2e70389d5c4c183d532772970745510f8d871698cc971c69c7ac8c477  results/v7_7b/mtps_c_v7_7b_table_cells.csv
+ccac3e79af6d9431bb6c9337362cbe902e81170e6e3fc1ac0d355b1b4a825757  results/v7_7b/veredicto_prerregistrado_v7_7b.json
+a6cb6812ab628ee66402644fe60a02d7dad54276fbc2cb6416206b89a5499afd  results/v7_7b/tiempos_por_config_v7_7b.csv
+
+# --- Resultados v7.7-c -----------------------------------------------------
+dd0436f0cd34e795346bc8bd54d44ac7fb08cec8d3708cd0962a183c0d787410  results/v7_7c/mtps_c_v7_7c_metrics.txt
+26fd9eb8152c457cb6ad60415dda60432596704e3c5ec9d39c0e687e8ba7b523  results/v7_7c/mtps_c_v7_7c_horizonte.csv
+6416940a0feda6fa7848650c00efd6913d7021a4ff32748b2066f44cece83ae8  results/v7_7c/mtps_c_v7_7c_prediccion.json
+41beddd1c981d29f97a66833ef5f7dd89cfc7b2048d580b026491aee29ad0710  results/v7_7c/mtps_c_v7_7c_table_cells.csv
+62eeaae919ffcabe81dfbfc8e75be77b7876f9951019a45b42cb1bcfaf343901  results/v7_7c/veredicto_prerregistrado_v7_7c.json
+34a32fb9762cd1345ed8c8600693e295e4af50215f7f0a6944cefabb202a7596  results/v7_7c/tiempos_por_config_v7_7c.csv
