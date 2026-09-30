@@ -86,8 +86,10 @@ python verify.py
 No dependencies — standard library only, Python 3.8+. Three independent
 checks:
 
-1. **Manifest.** Recomputes the SHA-256 of all 44 packaged files and compares
-   against `MANIFEST.sha256`.
+1. **Manifest.** Recomputes the SHA-256 of the 44 audit-chain files listed in
+   `MANIFEST.sha256` — the artefacts the program's minutes anchor. Repository
+   infrastructure such as this README, the licences, the verifier itself or the
+   CI workflow is not part of that package and is not manifested.
 2. **Canonical dataset.** Regenerates the dataset hash from
    `data/mtps_c_v7_7a_configs.json` using the stable serialisation defined in
    the freezing minutes, and compares against the value the abort gates
@@ -96,6 +98,10 @@ checks:
 3. **Derivation chain.** Confirms that the hashes each diff artefact declares
    in its header match the manifest, so that
    v7.7-a → v7.7-b → v7.7-c is verified rather than asserted.
+4. **Undeclared files.** Lists anything present that the manifest does not
+   declare and that is not known infrastructure. Informational: it does not
+   make the verification fail, since a repository may legitimately gain a
+   workflow or a dependency file without altering the anchored package.
 
 ### Measured portability
 
