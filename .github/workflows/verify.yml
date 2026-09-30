@@ -1,0 +1,24 @@
+# Runs the integrity verifier on every push and pull request.
+#
+# No dependencies are installed on purpose: verify.py uses the standard
+# library only. If this workflow ever needs a package, something has drifted.
+
+name: Verify package
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify manifest, canonical dataset and derivation chain
+        run: python verify.py

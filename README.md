@@ -18,6 +18,8 @@ The full audit chain is anchored by SHA-256 and verifiable in ten seconds.
 python verify.py
 ```
 
+[![Verify package](https://github.com/joaquinpenafiel/conformal-prediction-three-body/actions/workflows/verify.yml/badge.svg)](https://github.com/joaquinpenafiel/conformal-prediction-three-body/actions/workflows/verify.yml)
+
 ---
 
 ## What was measured
@@ -117,6 +119,7 @@ portability of the method are therefore measured, not assumed.
 ## Layout
 
 ```
+docs/INDEX.md        what each document contains, in English
 docs/preregistros/   frozen preregistrations, one per stage
 docs/actas/          freezing minutes, amendments, authorisation annexes,
                      closing minutes — current versions only
@@ -131,7 +134,8 @@ results/v7_7a|b|c/   metrics, per-cell tables, horizon series, verdicts,
 ```
 
 Documents are in Spanish and are **not** translated: their SHA-256 is what
-makes the chain verifiable, and any re-export would break it. Do not open the
+makes the chain verifiable, and any re-export would break it. `docs/INDEX.md`
+describes each of them in English, with the SHA-256 the manifest records. Do not open the
 `.docx` files in a word processor and save them — that alters the hash even if
 the text does not change.
 
@@ -147,14 +151,23 @@ Requirements: `numpy`, `scipy`, `scikit-learn`, `matplotlib`. The runs were
 executed on Python 3.13.15 with numpy 2.1.3 on Linux.
 
 ```python
-import sys; sys.path.insert(0, "src/v7_7c")
+import sys
+sys.path.insert(0, "src/v7_7c")
+sys.path.insert(0, "src/v7_7b")
+sys.path.insert(0, "src/v7_7a")
+
 from mtps_c_v7_7c_runner import run_stage_c
-run_stage_c(H=2)          # intermediate control point, 20 snapshots
-# gate must pass before the operative arm:
 from mtps_c_v7_7c_consolidate import verify_g14
-verify_g14(H=2)
-run_stage_c(H=4)          # operative variable, 40 snapshots
+
+run_stage_c(H=2, drive_base="outputs")   # intermediate control point
+verify_g14(H=2, base="outputs")          # gate must pass before the next arm
+run_stage_c(H=4, drive_base="outputs")   # operative variable, 40 snapshots
 ```
+
+The `drive_base` argument matters: the modules default to the Google Drive
+path where the original runs were executed, so a local clone must redirect it.
+Checkpoints, partials and outputs are written there and the run resumes from
+them if interrupted.
 
 **Expect this to be slow, and read the cost note below before starting.**
 

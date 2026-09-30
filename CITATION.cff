@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: >-
-  MTPS-C: prerregistered conformal prediction for chaotic
+  MTPS-C: preregistered conformal prediction for chaotic
   three-body systems
 message: >-
   If you use this work, please cite it using the metadata
@@ -14,7 +14,7 @@ authors:
 repository-code: >-
   https://github.com/joaquinpenafiel/conformal-prediction-three-body
 abstract: >-
-  A prerregistered experimental program that characterises the
+  A preregistered experimental program that characterises the
   operating domain of a conformal prediction instrument for
   chaotic three-body systems. Coverage is calibrated per
   physical configuration using simulated replicas as a local

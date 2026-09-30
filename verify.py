@@ -23,6 +23,10 @@ Hace tres cosas, en este orden:
      la anterior: el manifiesto verifica el archivo, esto verifica que su
      CONTENIDO produce el hash que los experimentos usaron.
 
+  4. ARCHIVOS NO DECLARADOS. Lista, sin hacer fallar la verificacion, los
+     archivos presentes que el manifiesto no declara y que no son
+     infraestructura conocida del repositorio.
+
   3. COHERENCIA INTERNA. Comprueba que los hashes que los artefactos de diff
      declaran en su encabezado coinciden con los del manifiesto, de modo que
      la cadena de derivacion v7.7-a -> v7.7-b -> v7.7-c quede verificada y no
@@ -212,6 +216,55 @@ def verificar_cadena(hashes):
 
 # ==============================================================================
 
+# ==============================================================================
+# 4. Archivos no declarados (informativo)
+# ==============================================================================
+
+# Infraestructura del repositorio: no forma parte del paquete anclado por las
+# actas del programa, y por eso no figura en el manifiesto.
+NO_MANIFESTADOS_ESPERADOS = {
+    "README.md", "LICENSE", "LICENSE-DOCS", "CITATION.cff",
+    "MANIFEST.sha256", "verify.py", "requirements.txt",
+    ".gitignore", ".gitattributes",
+    "docs/INDEX.md",
+    "demo/run_demo.py", "demo/README.md",
+    ".github/workflows/verify.yml",
+}
+
+
+def revisar_no_declarados(manifestados):
+    """Lista archivos presentes que el manifiesto no declara.
+
+    No hace fallar la verificacion: un repositorio puede incorporar
+    infraestructura legitima —un workflow, un archivo de dependencias— sin que
+    eso altere el paquete que las actas anclan. La comprobacion existe para que
+    la diferencia entre "los archivos del manifiesto verifican" y "el paquete
+    contiene exactamente lo declarado" quede a la vista en lugar de suponerse.
+    """
+    titulo("4. ARCHIVOS NO DECLARADOS — informativo, no hace fallar")
+    presentes = set()
+    for base, dirs, archivos in os.walk(RAIZ):
+        dirs[:] = [d for d in dirs
+                   if d not in (".git", "__pycache__", "outputs", ".ipynb_checkpoints")]
+        for a in archivos:
+            rel = os.path.relpath(os.path.join(base, a), RAIZ).replace(os.sep, "/")
+            presentes.add(rel)
+
+    extra = sorted(presentes - set(manifestados) - NO_MANIFESTADOS_ESPERADOS)
+    print(f"  archivos en el arbol        : {len(presentes)}")
+    print(f"  declarados en el manifiesto : {len(manifestados)}")
+    print(f"  infraestructura conocida    : {len(NO_MANIFESTADOS_ESPERADOS)}")
+    if extra:
+        print(f"{AMARILLO}  no declarados ni conocidos  : {len(extra)}{FIN}")
+        for r in extra[:20]:
+            print(f"      {r}")
+        if len(extra) > 20:
+            print(f"      ... y {len(extra) - 20} mas")
+    else:
+        print(f"  {VERDE}sin archivos fuera de lo declarado{FIN}")
+    return extra
+
+
 def main():
     print()
     print("MTPS-C — verificacion de integridad del paquete publicado")
@@ -220,6 +273,7 @@ def main():
     ok_manifiesto, hashes = verificar_manifiesto()
     ok_dataset = verificar_dataset()
     ok_cadena = verificar_cadena(hashes)
+    extra = revisar_no_declarados(hashes.keys())
 
     titulo("RESULTADO")
     for etiqueta, estado in (("Manifiesto", ok_manifiesto),
@@ -227,6 +281,9 @@ def main():
                              ("Cadena de derivacion", ok_cadena)):
         marca = f"{VERDE}OK{FIN}" if estado else f"{ROJO}FALLA{FIN}"
         print(f"  {etiqueta:<24} {marca}")
+    print(f"  {'Archivos no declarados':<24} "
+          + (f"{VERDE}ninguno{FIN}" if not extra
+             else f"{AMARILLO}{len(extra)} (informativo){FIN}"))
 
     todo = ok_manifiesto and ok_dataset and ok_cadena
     print()

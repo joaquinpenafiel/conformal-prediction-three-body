@@ -1,0 +1,19 @@
+# Dependencies for reproducing the runs (src/ and demo/).
+#
+# verify.py needs NONE of these: it uses the standard library only, so the
+# documentary chain can be checked on a bare Python install.
+#
+# Versions used for the published runs, recorded in the provenance block of
+# every partial: Python 3.13.15, numpy 2.1.3, Linux 6.6.122 x86-64.
+# The demonstration run has also been executed on Python 3.10 with numpy 2.2.6
+# and scipy 1.15.3 on Windows, reproducing coverage exactly and the conformal
+# radius to 8.6e-11 relative. Pinning is therefore not required; the versions
+# below are the floors the code was written against.
+
+numpy>=2.0
+scipy>=1.11
+scikit-learn>=1.3
+
+# Pulled in by the frozen v7.7-a module, which produces a results figure.
+# The demo draws nothing, but the import must resolve.
+matplotlib>=3.7
