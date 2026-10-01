@@ -86,7 +86,7 @@ python verify.py
 No dependencies — standard library only, Python 3.8+. Three independent
 checks:
 
-1. **Manifest.** Recomputes the SHA-256 of the 44 audit-chain files listed in
+1. **Manifest.** Recomputes the SHA-256 of the 45 audit-chain files listed in
    `MANIFEST.sha256` — the artefacts the program's minutes anchor. Repository
    infrastructure such as this README, the licences, the verifier itself or the
    CI workflow is not part of that package and is not manifested.
@@ -237,6 +237,21 @@ See `CITATION.cff`, or:
 Code (`src/`, `verify.py`) under **Apache 2.0** — see `LICENSE`.
 Documents, data and results (`docs/`, `data/`, `results/`) under
 **CC BY 4.0** — see `LICENSE-DOCS`.
+
+---
+
+## Post-cycle note
+
+**NT-02** (`docs/notas/`) withdraws one exploratory conjecture from the v7.7-c
+report — the data refute it — and records what they show instead: the useful
+horizon varies by dynamical regime by more than an order of magnitude. Four of
+fifteen regimes never cross the structural criterion within the explored range;
+three cross at the first snapshot. The aggregate boundary at snapshot 26 is
+where the median crosses, which is roughly where more than half the regimes
+have already crossed — not a transition in the system.
+
+The note alters no preregistered verdict and does not modify the report, whose
+hash stands. Nothing in this program is corrected in place.
 
 ---
 

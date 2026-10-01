@@ -75,6 +75,7 @@ failed by a factor of two at its furthest point.
 | `Nota_Tecnica_NT01_MTPS-C_Penafiel_rev4.docx` | Why the two highest nominal levels collapsed to the same threshold with a small calibration set, and the prediction — closed 3/3 — that this would persist across ensemble sizes. The hypothesis that motivated stage v7.7-b | `24a31b41…4823e4f` |
 | `LIT-00_Mapa_de_Literatura_MTPS-C_v1_0.docx` | Literature map: 17 entries over 12 works, 16 verified against the source PDF. Positions the method as Mondrian conformal prediction with a stratum predefined by physical configuration | `197d295f…35aebe66` |
 | `NA-01_Auditoria_Hoja_de_Ruta_MTPS-C_v7_7b.docx` | Audit note on the v7.7-b preregistration, including the amendment recording that M = 50 has lower aggregate structural deviation — so choosing M = 40 is a declared priority, not a dominance claim | `eaa7570a…87b6991` |
+| `Nota_Tecnica_NT02_MTPS-C_Penafiel.docx` | **Issued after the cycle closed.** Withdraws an exploratory conjecture from the v7.7-c report that the data refute, and records what the data show instead: the useful horizon varies by dynamical regime by more than an order of magnitude. Four of fifteen regimes never cross the structural criterion; three cross at the first snapshot | `d433a93c…c94d72c` |
 
 ---
 
@@ -87,4 +88,6 @@ A reviewer with fifteen minutes:
    result does not claim.
 2. `actas/ENMIENDA_02_al_ACTA_02_MTPS-C_v7_7c.docx` — how a gate that aborted
    the run was resolved without weakening it after the fact.
-3. `python verify.py` at the repository root.
+3. `notas/Nota_Tecnica_NT02_MTPS-C_Penafiel.docx` — how a conjecture the
+   program had itself published was withdrawn once the data refuted it.
+4. `python verify.py` at the repository root.
